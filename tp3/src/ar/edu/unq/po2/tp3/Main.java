@@ -1,5 +1,8 @@
 package ar.edu.unq.po2.tp3;
 
+import ar.edu.unq.po2.tp3.equipodetrabajo.EquipoDeTrabajo;
+import ar.edu.unq.po2.tp3.equipodetrabajo.Persona;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -25,7 +28,21 @@ public class Main {
         // System.out.println(dataTypes.getExampleWrapperClass());
         dataTypes.defaultValuesInMethod();
 
+        //-------------------------------------------------
+        // 11. Equipo de trabajo
+        EquipoDeTrabajo equipoDeTrabajo = new EquipoDeTrabajo("Equipo 1");
+        Persona persona1 = new Persona("Juan", "Mendoza",25);
+        Persona persona2 = new Persona("Maria", "Leopardo",30);
+        Persona persona3 = new Persona("Pedro", "Aguirre",35);
+        Persona persona4 = new Persona("Ana", "Ledesma",28);
+        Persona persona5 = new Persona("Luis", "Guerrero",40);
 
+        equipoDeTrabajo.addEmployee(persona1);
+        equipoDeTrabajo.addEmployee(persona2);
+        equipoDeTrabajo.addEmployee(persona3);
+        equipoDeTrabajo.addEmployee(persona4);
+        equipoDeTrabajo.addEmployee(persona5);
 
+        System.out.println("Promedio del equipo de trabajo: " + equipoDeTrabajo.getAverageEmployeesAge());
     }
 }
