@@ -1,3 +1,5 @@
+package empleados;
+
 import java.time.LocalDate;
 
 public class Contratado extends Empleado {
@@ -5,7 +7,7 @@ public class Contratado extends Empleado {
     private int nrodeContrato;
     private String medioDePago;
 
-    public Contratado(double sueldoBasico, LocalDate fechaNacimiento, EstadoCivil estadoCivil, String direccion, String nombre, int nrodeContrato, String medioDePago) {
+    public Contratado(double sueldoBasico, LocalDate fechaNacimiento, String estadoCivil, String direccion, String nombre, int nrodeContrato, String medioDePago) {
         super(sueldoBasico, fechaNacimiento, estadoCivil, direccion, nombre);
         this.nrodeContrato = nrodeContrato;
         this.medioDePago = medioDePago;
