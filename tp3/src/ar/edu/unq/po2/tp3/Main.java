@@ -4,12 +4,28 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Counter counter = new Counter();
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(123456);
-        list.add(7890);
-        list.add(24682);
-        int result = counter.xxx(list);
-        System.out.println("The number with the most even digits is: " + result);
+        // 4. Examinar las expresiones
+        String a = "abc";
+        String s = a;
+        String t;
+
+        System.out.println(s.length());
+        //System.out.println(t.length()); --> Da error de sintaxis, t no está inicializada
+        System.out.println((1 + a));
+        System.out.println(a.toUpperCase());
+        System.out.println("Libertad".indexOf("r"));
+        System.out.println("Universidad".lastIndexOf('i'));
+        System.out.println("Quilmes".substring(2,4));
+        System.out.println((a.length() + a).startsWith("a"));
+        System.out.println(s == a);
+        System.out.println(a.substring(1,3).equals("bc"));
+
+        DataTypes dataTypes = new DataTypes();
+        System.out.println(dataTypes.getExamplePrimitiveDataType());
+        // System.out.println(dataTypes.getExampleWrapperClass());
+        dataTypes.defaultValuesInMethod();
+
+
+
     }
 }

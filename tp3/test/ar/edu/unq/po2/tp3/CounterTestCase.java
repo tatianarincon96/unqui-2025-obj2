@@ -3,9 +3,6 @@ package ar.edu.unq.po2.tp3;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CounterTestCase {
@@ -30,7 +27,7 @@ public class CounterTestCase {
         counter.addNumber(1);
         counter.addNumber(1);
         counter.addNumber(1);
-        counter.addNumber(4);
+        counter.addNumber(64);
     }
 
     /**
@@ -45,15 +42,27 @@ public class CounterTestCase {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testOddNumbers() {
         int amount = counter.getOddOcurrences();
         assertEquals(9, amount);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testMultipleNumbers() {
-        int amount = counter.obtainMultiplesOf(3);
+        int amount = counter.getMultiplesOf(3);
         assertEquals(2, amount);
+    }
+
+    @Test
+    void testNumberWithMoreEvenDigits() {
+        int number = counter.getNumberWithMoreEvenDigits(counter.getList());
+        assertEquals(64, number);
+    }
+
+    @Test
+    void getMultiples() {
+        int amount = counter.getMaxMultipleInCommon(3,9);
+        assertEquals(999, amount);
     }
 }
