@@ -1,3 +1,8 @@
+package empleados;
+
+import empleados.estadocivil.EstadoCivil;
+import empleados.estadocivil.EstadoCivilFactory;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -8,10 +13,10 @@ public abstract class Empleado {
     private LocalDate fechaNacimiento;
     private double sueldoBasico;
 
-    public Empleado(double sueldoBasico, LocalDate fechaNacimiento, EstadoCivil estadoCivil, String direccion, String nombre) {
+    public Empleado(double sueldoBasico, LocalDate fechaNacimiento, String estadoCivil, String direccion, String nombre) {
         this.sueldoBasico = sueldoBasico;
         this.fechaNacimiento = fechaNacimiento;
-        this.estadoCivil = estadoCivil;
+        this.estadoCivil = EstadoCivilFactory.obtenerEstadoCivil(estadoCivil);
         this.direccion = direccion;
         this.nombre = nombre;
     }
@@ -20,32 +25,16 @@ public abstract class Empleado {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getDireccion() {
         return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
     }
 
     public EstadoCivil getEstadoCivil() {
         return estadoCivil;
     }
 
-    public void setEstadoCivil(EstadoCivil estadoCivil) {
-        this.estadoCivil = estadoCivil;
-    }
-
     public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
     }
 
     public double getSueldoBasico() {

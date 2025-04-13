@@ -1,12 +1,13 @@
+package empleados;
+
 import java.time.LocalDate;
-import java.time.Period;
 
 public class PlantaTemporaria extends Empleado {
 
     private LocalDate fechaFinDesignacionPT;
     private int cantidadHorasExtras;
 
-    public PlantaTemporaria(double sueldoBasico, LocalDate fechaNacimiento, EstadoCivil estadoCivil, String direccion, String nombre, LocalDate fechaFinDesignacionPT, int cantidadHorasExtras) {
+    public PlantaTemporaria(double sueldoBasico, LocalDate fechaNacimiento, String estadoCivil, String direccion, String nombre, LocalDate fechaFinDesignacionPT, int cantidadHorasExtras) {
         super(sueldoBasico, fechaNacimiento, estadoCivil, direccion, nombre);
         this.fechaFinDesignacionPT = fechaFinDesignacionPT;
         this.cantidadHorasExtras = cantidadHorasExtras;
