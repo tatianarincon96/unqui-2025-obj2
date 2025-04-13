@@ -1,14 +1,15 @@
 package ar.edu.unq.po2.tp3.equipodetrabajo;
 
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class EquipoDeTrabajo {
     private String name;
-    private ArrayList<Persona> employees;
+    private Set<Persona> employees;
 
     public EquipoDeTrabajo(String name) {
         this.name = name;
-        this.employees = new ArrayList<>();
+        this.employees = new HashSet<>();
     }
 
     public String getName() {
