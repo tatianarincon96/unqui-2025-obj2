@@ -1,3 +1,4 @@
+import ar.edu.unq.po2.tp3.Cuadrado;
 import ar.edu.unq.po2.tp3.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
