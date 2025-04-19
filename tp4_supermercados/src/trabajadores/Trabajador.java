@@ -20,7 +20,7 @@ public class Trabajador {
 
     //retornar el monto imponible al impuesto al trabajador
     public double getMontoImponible() {
-        return ingresos.stream().reduce(0d, (total, ingreso) -> total + ingreso.montoImponible(), Double::sum);
+        return ingresos.stream().reduce(0d, (total, ingreso) -> total + ingreso.getMontoImponible(), Double::sum);
     }
 
     //retornar el monto a pagar por el trabajador, calculado como el 2% del monto imponible

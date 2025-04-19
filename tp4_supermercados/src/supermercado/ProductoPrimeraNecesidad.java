@@ -3,12 +3,9 @@ package supermercado;
 public class ProductoPrimeraNecesidad extends Producto {
     private double descuento;
 
-    public ProductoPrimeraNecesidad(String nombre, double precio) {
+    public ProductoPrimeraNecesidad(String nombre, double precio, double descuento) {
         super(nombre, precio);
-    }
-
-    public ProductoPrimeraNecesidad(String nombre, double precio, boolean esParteDePreciosCuidados) {
-        super(nombre, precio, esParteDePreciosCuidados);
+        this.descuento = descuento;
     }
 
     public ProductoPrimeraNecesidad(String nombre, double precio, boolean esParteDePreciosCuidados, double descuento) {

@@ -15,7 +15,7 @@ public class Ingreso {
         return montoPercibido;
     }
 
-    public double montoImponible() {
+    public double getMontoImponible() {
         return this.montoPercibido;
     }
 
