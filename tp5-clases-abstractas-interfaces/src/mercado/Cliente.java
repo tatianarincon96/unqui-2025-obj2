@@ -1,5 +1,8 @@
 package mercado;
 
+import mercado.productos.Producto;
+import mercado.servicios.Factura;
+
 import java.util.ArrayList;
 
 public class Cliente {
@@ -11,10 +14,13 @@ public class Cliente {
         this.caja = caja;
     }
 
-    public double comprar(ArrayList<Producto> productos) {
+    public double comprarProductos(ArrayList<Producto> productos) {
         caja.registrarProductos(productos);
-        double montoAPagar = caja.informarMontoYLimpiarCaja();
-        System.out.println("El monto a pagar por " + nombre + " es: " + montoAPagar);
-        return montoAPagar;
+        return caja.getMontoAPagar();
+    }
+
+    public double pagarFactura(Factura factura) {
+        caja.registrarPago(factura);
+        return caja.getMontoAPagar();
     }
 }

@@ -1,4 +1,4 @@
-package mercado;
+package mercado.productos;
 
 public class ProductoDeEmpresaTradicional extends Producto {
 

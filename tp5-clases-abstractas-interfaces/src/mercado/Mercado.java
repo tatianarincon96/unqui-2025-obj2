@@ -1,5 +1,7 @@
 package mercado;
 
+import mercado.productos.Producto;
+
 import java.util.HashMap;
 import java.util.Map;
 

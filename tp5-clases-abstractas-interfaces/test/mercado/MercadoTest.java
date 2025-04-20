@@ -1,5 +1,8 @@
 package mercado;
 
+import mercado.productos.Producto;
+import mercado.productos.ProductoDeCooperativa;
+import mercado.productos.ProductoDeEmpresaTradicional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

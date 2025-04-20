@@ -1,4 +1,4 @@
-package mercado;
+package mercado.productos;
 
 public class ProductoDeCooperativa extends Producto {
 
@@ -8,7 +8,7 @@ public class ProductoDeCooperativa extends Producto {
     }
 
     @Override
-    public double getPrecio() {
+    public double getCosto() {
         return precio * 0.9;
     }
 }

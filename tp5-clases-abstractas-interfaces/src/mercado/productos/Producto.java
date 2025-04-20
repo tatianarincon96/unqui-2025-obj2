@@ -1,6 +1,8 @@
-package mercado;
+package mercado.productos;
 
-public abstract class Producto {
+import mercado.Pagable;
+
+public abstract class Producto implements Pagable {
     protected String nombre;
     protected double precio;
 
@@ -8,10 +10,10 @@ public abstract class Producto {
         return nombre;
     }
 
-    public double getPrecio() {
+    public double getCosto() {
         return precio;
     }
-    protected void setPrecio(double precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 }
