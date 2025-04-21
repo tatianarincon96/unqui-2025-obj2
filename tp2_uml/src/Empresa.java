@@ -17,22 +17,6 @@ public class Empresa {
         this.recibos = new ArrayList<ReciboHaberes>();
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getCuit() {
-        return cuit;
-    }
-
-    public void setCuit(int cuit) {
-        this.cuit = cuit;
-    }
-
     public List<Empleado> getEmpleados() {
         return empleados;
     }
@@ -45,23 +29,15 @@ public class Empresa {
         return recibos;
     }
 
-    public void setRecibos(List<ReciboHaberes> recibos) {
-        this.recibos = recibos;
-    }
-
-    public void agregarEmpleados(List<Empleado> empleados) {
-        this.empleados.addAll(empleados);
-    }
-
     public void liquidarSueldo() {
         for (Empleado empleado : empleados) {
             ReciboHaberes recibo = new ReciboHaberes(
-                    empleado.obtenerDesgloseDeConceptos(),
-                    empleado.calcularSueldoNeto(),
-                    empleado.calcularSueldoBruto(),
-                    LocalDate.now(),
+                    empleado.getNombre(),
                     empleado.getDireccion(),
-                    empleado.getNombre()
+                    LocalDate.now(),
+                    empleado.calcularSueldoBruto(),
+                    empleado.calcularSueldoNeto(),
+                    empleado.obtenerDesgloseDeConceptos()
             );
             recibos.add(recibo);
         }

@@ -1,5 +1,8 @@
 package empleados.estadocivil;
 
-public interface EstadoCivil {
-    double calcularAsignacionPorConyugue();
+public abstract class EstadoCivil {
+    protected double montoAsignable;
+    public double getMonto() {
+        return montoAsignable;
+    };
 }

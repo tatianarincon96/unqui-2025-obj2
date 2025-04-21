@@ -7,8 +7,8 @@ public class PlantaPermanente extends Empleado {
     private int cantidadHijos;
     private int antiguedad;
 
-    public PlantaPermanente(double sueldoBasico, LocalDate fechaNacimiento, String estadoCivil, String direccion, String nombre, int cantidadHijos, int antiguedad) {
-        super(sueldoBasico, fechaNacimiento, estadoCivil, direccion, nombre);
+    public PlantaPermanente(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento, double sueldoBasico, int cantidadHijos, int antiguedad) {
+        super(nombre, direccion, estadoCivil, fechaNacimiento, sueldoBasico);
         this.cantidadHijos = cantidadHijos;
         this.antiguedad = antiguedad;
     }
@@ -16,7 +16,7 @@ public class PlantaPermanente extends Empleado {
     @Override
     public double calcularSueldoBruto() {
         double asignacionPorHijos = this.cantidadHijos * 150;
-        double asignacionPorConyugue = getEstadoCivil().calcularAsignacionPorConyugue();
+        double asignacionPorConyugue = getEstadoCivil().getMonto();
         double extraPorAntiguedad = this.antiguedad * 50;
 
         return getSueldoBasico() + asignacionPorHijos + asignacionPorConyugue + extraPorAntiguedad;
@@ -41,7 +41,7 @@ public class PlantaPermanente extends Empleado {
     public String obtenerDesgloseDeConceptos() {
         String mensaje = String.format("Sueldo básico empleado de planta permanente: %.2f ", getSueldoBasico());
         mensaje += String.format("\nAsignación por hijos: %d ", this.cantidadHijos * 150);
-        mensaje += String.format("\nAsignación por conyugue: %.2f ", getEstadoCivil().calcularAsignacionPorConyugue());
+        mensaje += String.format("\nAsignación por conyugue: %.2f ", getEstadoCivil().getMonto());
         mensaje += String.format("\nExtra por antiguedad: %d ", this.antiguedad * 50);
         mensaje += String.format("\nRetención obra social: %.2f ", this.calcularSueldoBruto() * 0.1);
         mensaje += String.format("\nRetención por hijos: %d ", this.cantidadHijos * 20);

@@ -13,12 +13,12 @@ public abstract class Empleado {
     private LocalDate fechaNacimiento;
     private double sueldoBasico;
 
-    public Empleado(double sueldoBasico, LocalDate fechaNacimiento, String estadoCivil, String direccion, String nombre) {
-        this.sueldoBasico = sueldoBasico;
-        this.fechaNacimiento = fechaNacimiento;
-        this.estadoCivil = EstadoCivilFactory.obtenerEstadoCivil(estadoCivil);
-        this.direccion = direccion;
+    public Empleado(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento, double sueldoBasico) {
         this.nombre = nombre;
+        this.direccion = direccion;
+        this.estadoCivil = EstadoCivilFactory.obtenerEstadoCivil(estadoCivil);
+        this.fechaNacimiento = fechaNacimiento;
+        this.sueldoBasico = sueldoBasico;
     }
 
     public String getNombre() {
@@ -39,10 +39,6 @@ public abstract class Empleado {
 
     public double getSueldoBasico() {
         return sueldoBasico;
-    }
-
-    public void setSueldoBasico(double sueldoBasico) {
-        this.sueldoBasico = sueldoBasico;
     }
 
     public int calcularEdad() {

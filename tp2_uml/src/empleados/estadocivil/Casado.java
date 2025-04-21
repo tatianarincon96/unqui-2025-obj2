@@ -1,9 +1,7 @@
 package empleados.estadocivil;
 
-public class Casado implements EstadoCivil {
-
-    @Override
-    public double calcularAsignacionPorConyugue() {
-        return 100;
+public class Casado extends EstadoCivil {
+    public Casado() {
+        this.montoAsignable = 100;
     }
 }

@@ -9,13 +9,13 @@ public class ReciboHaberes {
     private double sueldoNeto;
     private String desgloseConceptos;
 
-    public ReciboHaberes(String desgloseConceptos, double sueldoNeto, double sueldoBruto, LocalDate fechaEmision, String direccion, String nombreEmpleado) {
-        this.desgloseConceptos = desgloseConceptos;
-        this.sueldoNeto = sueldoNeto;
-        this.sueldoBruto = sueldoBruto;
-        this.fechaEmision = fechaEmision;
-        this.direccion = direccion;
+    public ReciboHaberes(String nombreEmpleado, String direccion, LocalDate fechaEmision, double sueldoBruto, double sueldoNeto, String desgloseConceptos) {
         this.nombreEmpleado = nombreEmpleado;
+        this.direccion = direccion;
+        this.fechaEmision = fechaEmision;
+        this.sueldoBruto = sueldoBruto;
+        this.sueldoNeto = sueldoNeto;
+        this.desgloseConceptos = desgloseConceptos;
     }
 
     public String mostrarRecibo() {
