@@ -15,7 +15,7 @@ public class GestionadorCorreo implements ICorreo {
     @Override
     public void borrarCorreo(Correo correo) {
         this.inbox.remove(correo);
-        this.borrados.remove(correo);
+        this.borrados.add(correo);
     }
 
     @Override
