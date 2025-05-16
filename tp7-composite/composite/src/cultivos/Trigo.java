@@ -1,9 +1,7 @@
 package cultivos;
 
-public class Soja implements Cultivable {
-
-    @Override
-    public double calcularGananciasAnuales() {
-        return 500;
+public class Trigo extends Cultivo {
+    public Trigo() {
+        this.precio = 300;
     }
 }
