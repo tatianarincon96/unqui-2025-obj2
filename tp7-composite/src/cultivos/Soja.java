@@ -2,6 +2,6 @@ package cultivos;
 
 public class Soja extends Cultivo {
     public Soja() {
-        this.precio = 500;
+        this.precio = 2000;
     }
 }
